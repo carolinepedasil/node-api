@@ -21,4 +21,6 @@ module.exports = (app) => {
     let router = require("express").Router();
 
     router.post("/", artigosController.create);
+
+    app.use("/artigos", router);
 }
