@@ -1,13 +1,9 @@
-// Configuração do banco de dados
-
-// dotenv
-// npm install --save dotenv
-
+// configuração do banco de dados
 const dotenv = require("dotenv");
 
 dotenv.config();
 
 module.exports = {
-    connectionStringUrl: process.env.DB_CONNECTING_STRING_URL,
-    dialect: "postgres"
+  connectionStringUrl: process.env.DB_CONNECTION_STRING_URL,
+  dialect: "postgres",
 };

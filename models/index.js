@@ -1,12 +1,12 @@
-const databaseCondig = require("../config/db.config.js");
+const databaseConfig = require("../config/db.config.js");
 const Sequelize = require("sequelize");
 
-const sequelizeOptions = { dialect: databaseCondig.dialect };
+const sequelizeOptions = { dialect: databaseConfig.dialect };
 const sequelizeDatabase = new Sequelize(databaseConfig.connectionStringUrl, sequelizeOptions);
 
 const database = {
-    Sequelize: Sequelize,
-    sequelizeDatabase: sequelizeDatabase
+  Sequelize: Sequelize,
+  sequelizeDatabase: sequelizeDatabase,
 };
 
 const artigosModel = require("./artigos.model.js");

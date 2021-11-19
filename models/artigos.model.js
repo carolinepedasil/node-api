@@ -1,17 +1,18 @@
-// Model da tabela de artigos
+// model da tabela de artigos
 
-// titulo, descrição, publicado
-module.exports = (sequelizeDatabase) => {
+//titulo, descrição, publicado
+
+module.exports = (sequelizeDatabase, Sequelize) => {
     const Artigo = sequelizeDatabase.define("artigos", {
         titulo: {
-            type: Sequelize.STRING,
+            type: Sequelize.STRING
         },
         descricao: {
-            type: Sequelize.STRING,
+            type: Sequelize.STRING
         },
         publicado: {
-            type: Sequelize.BOOLEAN,
-        },
+            type: Sequelize.BOOLEAN
+        }
     });
 
     return Artigo;
