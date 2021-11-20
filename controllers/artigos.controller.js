@@ -22,3 +22,11 @@ exports.create = (request, response) => {
       response.status(500).send("Ocorreu um erro ao salvar o artigo");
     })
 };
+
+exports.findAll = (request, response) => {
+    tabelaArtigos.findAll().then(function (data) {
+        response.send(data);
+    }).catch(function () {
+        response.status(500).send("Ocorreu um erro ao buscar os artigos");
+    });
+};
